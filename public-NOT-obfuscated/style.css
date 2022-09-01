@@ -1,0 +1,337 @@
+body{
+    background-color: black;
+}
+label{
+    color:white
+}
+
+canvas {
+    /* cursor: url('some-cursor.ico'), default; */
+    /* cursor: pointer, default;
+    border-color: #fff;
+    border-width: thick; */
+    background-color: black;
+    outline: wheat 3px solid;
+   }
+
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+
+.main__left {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+
+.main__right {
+    flex: 0.2;
+}
+
+.main__videos {
+    flex-grow: 1;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.main__controls {
+    background-color: #1C1E20;
+}
+
+.main__right {
+    background-color: #242324;
+    /* border-left: 1px solid #3D3D42; */
+}
+
+.main__controls {
+    color: #D2D2D2;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.main__controls__block {
+    display: flex;
+}
+
+.main__controls__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+}
+.main__controls__hover__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    cursor: pointer;
+}
+.main__controls__button:hover {
+    background-color: #343434;
+    border-radius: 5px;
+}
+
+.main__controls__button i {
+    font-size: 24px;
+}
+
+
+/* Right side code 
+ */
+.main_right_Both_Chat_Participants{
+display: flex;
+flex-direction: column;
+background-color: #242324;
+border-left: 1px solid #3d3d42;
+/* width: 100%; */
+
+
+}
+
+.main__right {
+    display: flex;
+    flex-direction: column;
+    /* height: 50%; */
+    max-height: 50%;
+    flex-basis: 50%;
+    width: 250px;
+}
+
+.main__header {
+    padding-top: 5px;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.main__chat_window {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.messages{
+    color: white;
+    list-style: none;
+}
+
+#chat_message{
+    height: 30px;
+    width: 70%;
+}
+
+.messages_list{
+    color: white;
+    list-style: none;
+}
+
+.main__message_container {
+    padding: 22px 12px;
+    display: flex;
+}
+
+.main__message_container input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #F5F5F5;
+}
+
+/* //-----------Participant code */
+.main__right__participants {
+    display: flex;
+    flex: 0.2;
+    flex-direction: column;
+    background-color: #242324;
+    /* border-left: 1px solid #3d3d42; */
+    /* height: 100%; */
+    max-height: 50%;
+    flex-basis: 50%;
+    width: 250px;
+
+
+  }
+  
+  .main__part_window {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .participant_list {
+    color: white;
+    list-style: none;
+  }
+/* //-----------Participant code */
+
+
+.leave_meeting {
+    color: #EB534B;
+}
+
+.unmute,.stop {
+    color: #CC3B33;
+}
+
+#pl{
+    width:560px; height:315px;
+     
+  }
+
+  #ppt{
+    width:560px; height:315px;
+     
+  }
+
+  #toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;right:0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+#toast #img{
+	width: 50px;
+	height: 50px;
+    
+    float: left;
+    
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+    box-sizing: border-box;
+
+    
+    background-color: #111;
+    color: #fff;
+}
+#toast #desc{
+
+    
+    color: #fff;
+   
+    padding: 16px;
+    
+    overflow: hidden;
+	white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 50px} 
+    to {min-width: 350px}
+}
+
+@keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 350px} 
+    to {min-width: 350px}
+}
+
+@keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+}
+
+video::-webkit-media-controls-timeline {display: none;}
+video::-webkit-media-controls-play-button{display:none;}
+video::-webkit-media-controls-current-time-display{display: none;}
+video::-webkit-media-controls-volume-slider{display: none;}
+
+.logo{
+    display: flex;
+    
+  }
+
+
+  /* The container <div> - needed to position the dropup content */
+  .dropup {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropup content (Hidden by Default) */
+  .dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 10vh;
+    background-color: black;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+  }
+  
+  /* Links inside the dropup */
+  .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropup links on hover */
+  .dropup-content a:hover {background-color: #ddd}
+  
+  /* Show the dropup menu on hover */
+  .dropup:hover .dropup-content {
+    display: block !important;
+  }
+  
+  
